@@ -18,12 +18,11 @@ class {'update_aptget':
   stage => first,
 }
 
-# default use case:
-include solr
-
-# you can also setup mutliple cores by uncommenting the below:
 #
-# class { 'solr':
-#    cores => [ 'development', 'staging', 'production' ]
-# }
-# 
+# Use case: create multiple cores.
+#
+
+ class { 'solr':
+    cores => [ 'development', 'staging', 'production' ]
+ }
+
