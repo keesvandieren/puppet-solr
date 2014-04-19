@@ -7,7 +7,7 @@
 # === Actions
 # - Copies a new jetty default file
 # - Creates solr home directory
-# - Downloads solr 4.4.0, extracts war and copies logging jars
+# - Downloads solr 4.7.2, extracts war and copies logging jars
 # - Creates solr data directory
 # - Creates solr config file with cores specified
 # - Links solr home directory to jetty webapps directory
@@ -21,7 +21,7 @@ class solr::config(
   $solr_home      = $::solr::params::solr_home
   $solr_version   = $::solr::params::solr_version
   $file_name      = "solr-${solr_version}.tgz"
-  $download_site  = 'http://archive.apache.org/dist/lucene/solr'
+  $download_site  = 'http://www.eng.lsu.edu/mirrors/apache/lucene/solr'
 
   #Copy the jetty config file
   file { '/etc/default/jetty':
