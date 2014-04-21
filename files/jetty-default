@@ -24,7 +24,9 @@ JETTY_PORT=8080
 # Additional arguments to pass to Jetty    
 #JETTY_ARGS=
 
-# Extra options to pass to the JVM         
+# Extra options to pass to the JVM
+# Squins customization: make Jetty use correct amount of memory.
+JAVA_OPTIONS="-Xms2536m -Xmx2536m"
 JAVA_OPTIONS="-Dsolr.solr.home=/usr/share/solr $JAVA_OPTIONS"
 
 # Home of Java installation.
